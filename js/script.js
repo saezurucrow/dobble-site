@@ -21,6 +21,10 @@ $(function () {
 
     // }, 1000);
 
+    const board_1 = []
+    const board_2 = []
+
+
 
   })
 });
