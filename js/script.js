@@ -21,6 +21,8 @@ $(function () {
 
     // }, 1000);
 
+    // TODO: boardそれぞれに7つのランダムの値をいれ、最後に共通の数字をいれるアルゴリズムをつくる
+    const board = []
     const board_1 = []
     const board_2 = []
 
