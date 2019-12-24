@@ -36,8 +36,8 @@ $(function () {
       let board_1 = []
       let board_2 = []
       for (let j = 0; j <= 6; j++) {
-        board_1.push(board[j])
-        board_2.push(board[j + 7])
+        board_1.push(array[j])
+        board_2.push(array[j + 7])
       }
       board_1.push(board[14])
       board_2.push(board[14])
@@ -54,10 +54,9 @@ $(function () {
       board_2
     } = array_set();
 
-
     for (let k = 0; k <= 7; k++) {
-      $('.board_1').append('<img src="img/' + board_1[k] + '.png"></img>');
-      $('.board_2').append('<img src="img/' + board_2[k] + '.png"></img>');
+      $('.board_1').append('<img class="img_' + board_1[k] + '" src="img/' + board_1[k] + '.png"></img>');
+      $('.board_2').append('<img class="img_' + board_2[k] + '" src="img/' + board_2[k] + '.png"></img>');
     }
   })
 });

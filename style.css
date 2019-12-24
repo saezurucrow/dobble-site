@@ -9,16 +9,20 @@ body {
 }
 
 img {
-  width: 15vw;
-  height: 15vh;
+  width: 20vw;
+  height: 20vh;
+}
+
+.game {
+  width: 100%;
 }
 
 .board {
-  float: left;
-  width: 50vw;
-  height: 50vh;
+  width: 100vw;
+  height: 45vh;
+  margin: 0 auto;
 }
 
 .board_2 {
-  border-left: medium solid #000000;
+  border-top: medium solid #000000;
 }
