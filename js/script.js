@@ -6,23 +6,6 @@ $(".start ").on("click", function () {
   $('.text').text("");
   $('.start').hide();
 
-  // カウントダウンタイマー
-  // let cnt = 5; //5秒前からカウントスタート
-
-  // $('.game').text(cnt);
-
-  // cnDown = setInterval(function () { //1秒おきにカウントマイナス
-  //   cnt--;
-
-  //   if (cnt <= 0) { //0になったら停止する
-  //     clearInterval(cnDown);
-  //     game()
-  //   }
-
-  //   $('.game').text(cnt);
-
-  // }, 1000);
-
   function shuffle(array) {
     for (let i = array.length - 1; i >= 0; i--) {
       let rand = Math.floor(Math.random() * (i + 1));
