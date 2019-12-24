@@ -1,4 +1,4 @@
-$(".start ").on("click", function () {
+$('.start ').on("click", function () {
 
   const startTime = performance.now();
   $('.text').text("");
@@ -43,9 +43,9 @@ $(".start ").on("click", function () {
     $('.board_2').append('<img class="img_' + board_2[k] + '" src="img/' + board_2[k] + '.png"></img>');
   }
 
-  $(".img_" + same).on("click", function () {
+  $('.img_' + same).on("click", function () {
     const endTime = performance.now();
-    const time = Math.round((endTime - startTime) / 100) / 10;
+    const time = Math.round((endTime - startTime) / 100);
     $('.text').text(time + "秒でクリア！");
     for (let k = 0; k <= 7; k++) {
       $('.board_1').empty();
