@@ -7,3 +7,18 @@
 body {
   text-align: center;
 }
+
+img {
+  width: 15vw;
+  height: 15vh;
+}
+
+.board {
+  float: left;
+  width: 50vw;
+  height: 50vh;
+}
+
+.board_2 {
+  border-left: medium solid #000000;
+}
