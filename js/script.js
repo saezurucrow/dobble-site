@@ -2,6 +2,7 @@ same = 0;
 
 $(".start ").on("click", function () {
 
+  const startTime = performance.now();
   $('.text').text("");
   $('.start').hide();
 
@@ -62,7 +63,9 @@ $(".start ").on("click", function () {
   }
 
   $(".img_" + same).on("click", function () {
-    $('.text').text("おめでとう");
+    const endTime = performance.now();
+    const time = Math.round((endTime - startTime) / 1000 * 10) / 10;
+    $('.text').text(time + "秒でクリア！");
     for (let k = 0; k <= 7; k++) {
       $('.board_1').empty();
       $('.board_2').empty();
