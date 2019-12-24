@@ -2,6 +2,9 @@ same = 0;
 
 $(".start ").on("click", function () {
 
+  $('.text').text("");
+  $('.start').hide();
+
   // カウントダウンタイマー
   // let cnt = 5; //5秒前からカウントスタート
 
@@ -59,11 +62,12 @@ $(".start ").on("click", function () {
   }
 
   $(".img_" + same).on("click", function () {
-    console.log("おめでとう");
+    $('.text').text("おめでとう");
     for (let k = 0; k <= 7; k++) {
       $('.board_1').empty();
       $('.board_2').empty();
     }
+    $('.start').show()
     $('.start').text("リセット");
   });
 });
