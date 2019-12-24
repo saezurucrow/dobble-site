@@ -1,5 +1,3 @@
-same = 0;
-
 $(".start ").on("click", function () {
 
   const startTime = performance.now();
@@ -15,7 +13,7 @@ $(".start ").on("click", function () {
     return array;
   }
 
-  function array_set() {
+  function board_set() {
     const board = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     array = shuffle(board);
     let board_1 = []
@@ -38,7 +36,7 @@ $(".start ").on("click", function () {
   let {
     board_1,
     board_2
-  } = array_set();
+  } = board_set();
 
   for (let k = 0; k <= 7; k++) {
     $('.board_1').append('<img class="img_' + board_1[k] + '" src="img/' + board_1[k] + '.png"></img>');
