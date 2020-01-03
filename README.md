@@ -1,5 +1,7 @@
 # ドブルゲーム
 
+url: https://saezurucrow.github.io/dobble-site/
+
 ## 基本ルール
 
 一つのカードに 8 枚の図柄がある。
