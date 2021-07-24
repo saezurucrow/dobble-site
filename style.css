@@ -24,6 +24,10 @@ img {
   display: inline-block;
 }
 
+.start .menu {
+  display: none;
+}
+
 .game {
   width: 100%;
 }
