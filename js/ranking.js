@@ -18,7 +18,7 @@ async function ranking(name, ave_score) {
   const _sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   await _sleep(3000);
 
-  fetch(`${API_URL}v1/ranking`, param)
+  fetch(`${API_URL}v1/rankings`, param)
     .then((res) => {
       return res.json();
     })
