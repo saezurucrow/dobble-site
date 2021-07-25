@@ -20,8 +20,15 @@ img {
   font-weight: bold;
 }
 
+.game {
+  display: none;
+}
+
 .start {
-  display: inline-block;
+  display: flex;
+  width: 25%;
+  height: 25em;
+  margin: auto;
 }
 
 .start .menu {

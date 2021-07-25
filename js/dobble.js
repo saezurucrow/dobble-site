@@ -58,8 +58,7 @@ function dobble(type, playCount, score = []) {
 
   $('.img_' + same).on('click', function () {
     const endTime = performance.now();
-    // TODO: 3.114秒みたいな表示にしたい
-    const time = Math.round((endTime - startTime) / 100) / 10;
+    const time = Math.round(endTime - startTime) / 1000;
     $('.result').text(time + '秒でクリア！');
     for (let k = 0; k <= 7; k++) {
       $('.board_1').empty();
@@ -72,7 +71,7 @@ function dobble(type, playCount, score = []) {
       if (playCount > 3) {
         $('.result').text('お疲れ様でした。あなたの結果は...');
         $('.count').text(
-          `${Math.round(average(score) * 100) / 100}秒です！(3回の平均値)`
+          `${Math.round(average(score) * 1000) / 1000}秒です！(3回の平均値)`
         );
         $('.start').show();
         $('.start-ranking').hide();
@@ -92,24 +91,4 @@ function dobble(type, playCount, score = []) {
       }
     }
   });
-}
-
-function allTextClear() {
-  $('.result').text('');
-  $('.count').text('');
-  $('.text').text('');
-}
-
-function average(arr, fn) {
-  return sum(arr, fn) / arr.length;
-}
-
-function sum(arr, fn) {
-  if (fn) {
-    return sum(arr.map(fn));
-  } else {
-    return arr.reduce(function (prev, current, i, arr) {
-      return prev + current;
-    });
-  }
 }

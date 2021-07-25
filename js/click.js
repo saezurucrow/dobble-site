@@ -1,11 +1,10 @@
 $('.start-ranking').on('click', function () {
-  $('.start-battle').hide();
-  $('.start-training').hide();
-  $('.start-matchting').hide();
+  allButtonHide();
 
   $('.result').text('');
   $('.count').text(3);
   $('.start').hide();
+  $('.game').show();
   let count = 2;
 
   let countDown = setInterval(function () {
@@ -20,13 +19,8 @@ $('.start-ranking').on('click', function () {
 });
 
 $('.menu').on('click', function () {
-  $('.start').show();
-  $('.start-battle').show();
-  $('.start-ranking').show();
-  $('.start-training').show();
-  $('.start-matchting').show();
-  $('.result').text('');
-  $('.count').text('');
-  $('.text').text('');
+  allTextClear();
+  allButtonShow();
   $('.menu').hide();
+  $('.game').hide();
 });
