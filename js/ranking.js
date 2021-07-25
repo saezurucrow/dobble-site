@@ -50,9 +50,9 @@ function showRanking() {
       console.log(json);
       json.data.forEach((ranking, index) => {
         $('.ranking-index').append(
-          `<tr><th scope="row">${index + 1}</th><td>${ranking.name}<td><td>${
+          `<tr><th scope="row">${index + 1}</th><td>${ranking.name}</td><td>${
             ranking.score
-          }<td><td>${ranking.created_at}<td></tr>`
+          }</td><td>${ranking.created_at}</td></tr>`
         );
       });
     })
