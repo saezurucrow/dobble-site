@@ -41,6 +41,7 @@ async function sendRanking(name, ave_score) {
 }
 
 function showRanking() {
+  moment.locale('ja');
   fetch(`${API_URL}v1/rankings`)
     .then((res) => {
       return res.json();
@@ -49,7 +50,7 @@ function showRanking() {
       $('.ranking-text').text('');
       json.data.forEach((ranking, index) => {
         console.log(ranking.created_at);
-        let date = moment(ranking.created_at).format('YYYY/MM/DD hh:mm:ss');
+        let date = moment(ranking.created_at).format('LLL');
         $('.ranking-index').append(
           `<tr><th scope="row">${index + 1}</th><td>${ranking.name}</td><td>${
             ranking.score
