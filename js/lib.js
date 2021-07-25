@@ -1,3 +1,5 @@
+const API_URL = 'http://localhost:3000/api/';
+
 function allButtonHide() {
   $('.start').hide();
   $('.start-ranking').hide();

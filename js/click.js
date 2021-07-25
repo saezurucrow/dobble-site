@@ -19,10 +19,17 @@ $('.start-ranking').on('click', function () {
   }, 1000);
 });
 
+$('.send-ranking').on('click', function () {
+  const name = $('#name').val();
+  const ave_score = localStorage.getItem('score');
+  ranking(name, ave_score);
+});
+
 $('.menu').on('click', function () {
   allTextClear();
   allButtonShow();
   $('.menu').hide();
   $('.game').hide();
+  $('.ranking').hide();
   $('.title').show();
 });

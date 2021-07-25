@@ -20,7 +20,9 @@ img {
   font-weight: bold;
 }
 
-.game {
+.game,
+.ranking,
+.start .menu {
   display: none;
 }
 
@@ -29,10 +31,6 @@ img {
   width: 50%;
   height: 25em;
   margin: auto;
-}
-
-.start .menu {
-  display: none;
 }
 
 .game {
