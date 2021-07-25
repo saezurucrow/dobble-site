@@ -52,7 +52,7 @@ function showRanking() {
         $('.ranking-index').append(
           `<tr><th scope="row">${index + 1}</th><td>${ranking.name}</td><td>${
             ranking.score
-          }s</td><td>${ranking.created_at}</td></tr>`
+          }s</td><td>${date}</td></tr>`
         );
       });
     })
