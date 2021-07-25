@@ -11,3 +11,5 @@ url: https://saezurucrow.github.io/dobble-site/
 それらを早く見つけられるかの瞬発力ゲーム。
 
 ref: https://boku-boardgame.net/dobble
+
+api: [dobble-site-api](https://github.com/saezurucrow/dobble-site-api)
