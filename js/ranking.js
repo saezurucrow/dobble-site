@@ -41,6 +41,7 @@ async function sendRanking(name, ave_score) {
 }
 
 function showRanking() {
+  moment.locale('ja');
   fetch(`${API_URL}v1/rankings`)
     .then((res) => {
       return res.json();

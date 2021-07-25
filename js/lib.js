@@ -1,5 +1,4 @@
 const API_URL = 'http://localhost:3000/api/';
-moment.locale('ja');
 
 function allButtonHide() {
   $('.start').hide();
