@@ -1,6 +1,8 @@
 async function ranking(name, ave_score) {
   // postする
   $('.ranking').hide();
+  $('.result').text('');
+  $('.count').html('');
   $('.text').text('ランキング送信中...');
 
   const data = {
@@ -23,9 +25,17 @@ async function ranking(name, ave_score) {
       return res.json();
     })
     .then((json) => {
-      console.log(json);
+      $('.result').text('');
+      $('.text').text('ランキング送信完了！');
+      $('.count').html(`<b>${json.rank}<b>/${json.rankLength}位でした！`);
+    })
+    .catch((error) => {
+      console.error(
+        'There has been a problem with your fetch operation:',
+        error
+      );
+      alert(
+        `${error} ランキング送信に失敗しました。ページを更新してください。`
+      );
     });
-
-  // 何位中何位か表示する
-  // menuを出す
 }

@@ -59,7 +59,7 @@ function dobble(type, playCount, score = []) {
   $('.img_' + same).on('click', function () {
     const endTime = performance.now();
     const time = Math.round(endTime - startTime) / 1000;
-    $('.result').text(time + '秒でクリア！');
+    $('.result').html(`<b>${time}</b>秒でクリア！`);
     for (let k = 0; k <= 7; k++) {
       $('.board_1').empty();
       $('.board_2').empty();
@@ -71,8 +71,8 @@ function dobble(type, playCount, score = []) {
       if (playCount > 3) {
         const ave_score = Math.round(average(score) * 1000) / 1000;
         $('.game').hide();
-        $('.result').text('お疲れ様でした。あなたの結果は...');
-        $('.count').text(`${ave_score}秒です！(3回の平均値)`);
+        $('.text').text('お疲れ様でした。あなたの結果は...');
+        $('.count').html(`<b>${ave_score}</b>秒です！(3回の平均値)`);
         $('.start').show();
         $('.start-ranking').hide();
         $('.menu').show();
