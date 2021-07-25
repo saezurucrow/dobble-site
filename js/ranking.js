@@ -48,7 +48,7 @@ function showRanking() {
     .then((json) => {
       $('.ranking-text').text('');
       json.data.forEach((ranking, index) => {
-        let date = moment().format(ranking.created_at, 'YYYY/MM/DD hh:mm:ss');
+        let date = moment(ranking.created_at).format('YYYY/MM/DD hh:mm:ss');
         $('.ranking-index').append(
           `<tr><th scope="row">${index + 1}</th><td>${ranking.name}</td><td>${
             ranking.score
