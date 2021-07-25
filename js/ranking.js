@@ -47,12 +47,12 @@ function showRanking() {
     })
     .then((json) => {
       $('.ranking-text').text('');
-      console.log(json);
       json.data.forEach((ranking, index) => {
+        let date = moment().format(ranking.created_at, 'YYYY/MM/DD hh:mm:ss');
         $('.ranking-index').append(
           `<tr><th scope="row">${index + 1}</th><td>${ranking.name}</td><td>${
             ranking.score
-          }</td><td>${ranking.created_at}</td></tr>`
+          }s</td><td>${ranking.created_at}</td></tr>`
         );
       });
     })
