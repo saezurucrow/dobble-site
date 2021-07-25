@@ -1,4 +1,4 @@
-async function ranking(name, ave_score) {
+async function sendRanking(name, ave_score) {
   // postする
   $('.ranking').hide();
   $('.result').text('');
@@ -28,6 +28,33 @@ async function ranking(name, ave_score) {
       $('.result').text('');
       $('.text').text('ランキング送信完了！');
       $('.count').html(`<b>${json.rank}</b>/${json.rankingLength}位でした！`);
+    })
+    .catch((error) => {
+      console.error(
+        'There has been a problem with your fetch operation:',
+        error
+      );
+      alert(
+        `${error} ランキング送信に失敗しました。ページを更新してください。`
+      );
+    });
+}
+
+function showRanking() {
+  fetch(`${API_URL}v1/rankings`)
+    .then((res) => {
+      return res.json();
+    })
+    .then((json) => {
+      $('.ranking-text').text('');
+      console.log(json);
+      json.data.forEach((ranking, index) => {
+        $('.ranking-index').append(
+          `<tr><th scope="row">${index + 1}</th><td>${ranking.name}<td><td>${
+            ranking.score
+          }<td><td>${ranking.created_at}<td></tr>`
+        );
+      });
     })
     .catch((error) => {
       console.error(

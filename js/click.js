@@ -22,7 +22,12 @@ $('.start-ranking').on('click', function () {
 $('.send-ranking').on('click', function () {
   const name = $('#name').val();
   const ave_score = localStorage.getItem('score');
-  ranking(name, ave_score);
+  sendRanking(name, ave_score);
+});
+
+$('.show-ranking').on('click', function () {
+  $('.ranking-text').text('ランキング取得中...');
+  showRanking();
 });
 
 $('.menu').on('click', function () {
