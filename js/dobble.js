@@ -69,6 +69,7 @@ function dobble(type, playCount, score = []) {
       score.push(time);
 
       if (playCount > 3) {
+        $('.game').hide();
         $('.result').text('お疲れ様でした。あなたの結果は...');
         $('.count').text(
           `${Math.round(average(score) * 1000) / 1000}秒です！(3回の平均値)`

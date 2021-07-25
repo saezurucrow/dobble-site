@@ -4,6 +4,7 @@ $('.start-ranking').on('click', function () {
   $('.result').text('');
   $('.count').text(3);
   $('.start').hide();
+  $('.title').hide();
   $('.game').show();
   let count = 2;
 
@@ -23,4 +24,5 @@ $('.menu').on('click', function () {
   allButtonShow();
   $('.menu').hide();
   $('.game').hide();
+  $('.title').show();
 });
