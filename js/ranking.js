@@ -27,7 +27,7 @@ async function ranking(name, ave_score) {
     .then((json) => {
       $('.result').text('');
       $('.text').text('ランキング送信完了！');
-      $('.count').html(`<b>${json.rank}<b>/${json.rankLength}位でした！`);
+      $('.count').html(`<b>${json.rank}</b>/${json.rankingLength}位でした！`);
     })
     .catch((error) => {
       console.error(
