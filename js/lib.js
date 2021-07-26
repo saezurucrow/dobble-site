@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/';
+const API_URL = 'https://dobble-site-api.herokuapp.com/api/';
 
 function allButtonHide() {
   $('.start').hide();
