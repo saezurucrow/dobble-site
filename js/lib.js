@@ -1,4 +1,5 @@
 const API_URL = 'https://dobble-site-api.herokuapp.com/api/';
+localStorage.removeItem('score');
 
 function allButtonHide() {
   $('.start').hide();
