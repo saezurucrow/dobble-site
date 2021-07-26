@@ -22,6 +22,15 @@ $('.start-ranking').on('click', function () {
 $('.send-ranking').on('click', function () {
   const name = $('#name').val();
   const ave_score = localStorage.getItem('score');
+
+  if (name.length === 0) {
+    alert('名前の入力は必須です。');
+    return;
+  }
+  if (ave_score === null) {
+    alert('不正な値です。真面目にプレイしてください。');
+    return;
+  }
   sendRanking(name, ave_score);
 });
 
