@@ -35,6 +35,7 @@ $('.send-ranking').on('click', function () {
 });
 
 $('.show-ranking').on('click', function () {
+  $('.ranking-index').empty();
   $('.ranking-text').text('ランキング取得中...');
   showRanking();
 });
