@@ -1,5 +1,7 @@
 # ドブルゲーム
 
+![dobble-chan](./dobble-chan.png)
+
 url: https://saezurucrow.github.io/dobble-site/
 
 ## 基本ルール
